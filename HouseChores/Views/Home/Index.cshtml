@@ -1,7 +1,15 @@
-﻿@model List<HouseChores.Model.Kitchen>
-@foreach (var c in Model)
+﻿@model HouseChores.Model.DB
+<h2><a href="/Home/Kitchen">Kitchen Chores</a></h2>
+@foreach (var c in Model.KitchenChores)
 {
     <div class="well">
-        <h3>@c.Chores</h3>
+        @c.Chores
+    </div>
+}
+<h2>Bedroom Chores</h2>
+@foreach (var c in Model.BedroomChores)
+{
+    <div class="well">
+        @c.Chores
     </div>
 }

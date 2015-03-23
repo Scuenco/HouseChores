@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HouseChores.Model
 {
-    public static class DB
+    public class DB
     {
-        private static List<Kitchen> _kchores { get; set; }
-        private static List<Bedroom> _bchores { get; set; }
-        public static List<Kitchen> KitchenChores
+        private List<Kitchen> _kchores { get; set; }
+        private List<Bedroom> _bchores { get; set; }
+        public List<Kitchen> KitchenChores
         {
             get
             {
@@ -29,7 +29,7 @@ namespace HouseChores.Model
                 _kchores = value;
             }
         }
-        public static List<Bedroom> BedroomChores
+        public List<Bedroom> BedroomChores
         {
             get
             {

@@ -11,9 +11,15 @@ namespace HouseChores.Controllers
     {
         public ActionResult Index()
         {
-            return View(DB.KitchenChores);//how do I add DB.BedroomChores here?
+            DB db = new DB();
+            return View(db);
         }
 
+        public ActionResult Kitchen()
+        {
+            DB db = new DB();
+            return View(db.KitchenChores);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
